@@ -10,6 +10,7 @@ from botbuilder.core import (
 
 from botbuilder.schema import Activity
 from bots import DialogBot
+from dialogs import UserProfileDialog
 from adapter_with_error_handler import AdapterWithErrorHandler
 
 
@@ -26,7 +27,8 @@ user_state = UserState(memory)
 conversation_state = ConversationState(memory)
 
 adapter = AdapterWithErrorHandler(settings, conversation_state)
-bot = DialogBot(conversation_state, user_state)
+dialog = UserProfileDialog(user_state)
+bot = DialogBot(conversation_state, user_state, dialog)
 
 @app.route("/api/messages", methods=["POST"])
 def messages():

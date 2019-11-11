@@ -7,7 +7,7 @@ class DialogHelper:
         dialog: Dialog, turn_context: TurnContext, accessor: StatePropertyAccessor
     ):
         dialog_set = DialogSet(accessor)
-        dialog_set.add(dialog_set)
+        dialog_set.add(dialog)
 
         dialog_context = await dialog_set.create_context(turn_context)
         results = await dialog_context.continue_dialog()
