@@ -51,8 +51,12 @@ def messages():
     except Exception as ex:
         raise ex
 
+@app.route("/test/hello")
+def test_hello():
+    return("The bot is alive")
+
 if __name__ == "__main__":
     try:
-        app.run(debug=False, port=app.config["PORT"]) # nosec debug
+        app.run(debug=False, port=app.config["PORT"], host='0.0.0.0') # nosec debug
     except Exception as ex:
         raise ex
