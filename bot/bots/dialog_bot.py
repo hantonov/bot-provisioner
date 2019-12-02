@@ -1,9 +1,9 @@
 from botbuilder.core import ActivityHandler, ConversationState, TurnContext, UserState
 from botbuilder.schema import ChannelAccount
 from botbuilder.dialogs import Dialog
-from helpers.dialog_helper import DialogHelper
+from ..helpers.dialog_helper import DialogHelper
 
-from data_models import WelcomeUserState
+from ..data_models import WelcomeUserState
 
 #The ConversationState is used by the Dialog system. The UserState isn't
 class DialogBot(ActivityHandler):
