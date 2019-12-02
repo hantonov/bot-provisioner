@@ -15,7 +15,7 @@ from botbuilder.dialogs.prompts import (
 from botbuilder.dialogs.choices import Choice
 from botbuilder.core import MessageFactory, UserState
 
-from data_models import UserProfile
+from ..data_models import UserProfile
 
 class UserProfileDialog(ComponentDialog):
     def __init__(self, user_state: UserState):

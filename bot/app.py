@@ -1,4 +1,5 @@
 import asyncio
+from datetime import datetime
 
 from flask import Flask, request, Response
 from botbuilder.core import (
@@ -9,16 +10,17 @@ from botbuilder.core import (
 )
 
 from botbuilder.schema import Activity
-from bots import DialogBot
-from dialogs import UserProfileDialog
-from adapter_with_error_handler import AdapterWithErrorHandler
-
+from .bots import DialogBot
+from .dialogs import UserProfileDialog
+from .adapter_with_error_handler import AdapterWithErrorHandler
 
 # Create the loop and Flask app
 
 loop = asyncio.get_event_loop()
 app = Flask(__name__, instance_relative_config=True)
-app.config.from_object("config.DefaultConfig")
+
+#app.config.from_object("config.DefaultConfig")
+app.config.from_envvar('BOT_APPLICATION_SETTINGS')
 
 settings = BotFrameworkAdapterSettings(app.config["APP_ID"], app.config["APP_PASSWORD"])
 
@@ -53,7 +55,7 @@ def messages():
 
 @app.route("/test/hello")
 def test_hello():
-    return("The bot is alive")
+    return("The bot is alive - " + str(datetime.utcnow()))
 
 if __name__ == "__main__":
     try:
