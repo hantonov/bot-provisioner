@@ -32,6 +32,7 @@ FROM python:3.7.4-slim as run
 ENV DOCKER_STAGE=run PYTHONUNBUFFERED=1
 
 RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=build /wheels /wheels
 
@@ -40,7 +41,11 @@ RUN \
     --find-links /wheels \
     --no-index \
     bot
+RUN useradd botuser
+USER botuser
+
 COPY settings.cfg /instance/
 ENV BOT_APPLICATION_SETTINGS=/instance/settings.cfg
 
+HEALTHCHECK CMD curl --fail http://localhost:3978/test/hello || exit 1
 CMD ["python", "-m", "bot.app"]
