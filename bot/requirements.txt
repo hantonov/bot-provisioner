@@ -4,72 +4,199 @@
 #
 #    pip-compile
 #
-adal==1.2.2               # via msrestazure
-aiohttp==3.5.4            # via botbuilder-ai
-aiounittest==1.3.0        # via botbuilder-ai, botbuilder-dialogs
-asn1crypto==0.24.0        # via cryptography
-astroid==2.2.5            # via pylint
-async-timeout==3.0.1      # via aiohttp
-atomicwrites==1.3.0       # via pytest
-attrs==19.1.0             # via aiohttp, packaging, pytest
-azure-cognitiveservices-language-luis==0.2.0  # via botbuilder-ai
-azure-common==1.1.23      # via azure-cognitiveservices-language-luis
-babel==2.7.0              # via botbuilder-dialogs
+adal==1.2.2
+    # via msrestazure
+aiohttp==3.5.4
+    # via botbuilder-ai
+aiounittest==1.3.0
+    # via
+    #   botbuilder-ai
+    #   botbuilder-dialogs
+asn1crypto==0.24.0
+    # via cryptography
+astroid==2.2.5
+    # via pylint
+async-timeout==3.0.1
+    # via aiohttp
+atomicwrites==1.3.0
+    # via pytest
+attrs==19.1.0
+    # via
+    #   aiohttp
+    #   packaging
+    #   pytest
+azure-cognitiveservices-language-luis==0.2.0
+    # via botbuilder-ai
+azure-common==1.1.23
+    # via azure-cognitiveservices-language-luis
+babel==2.7.0
+    # via botbuilder-dialogs
 botbuilder-ai==4.5.0b4
-botbuilder-core==4.5.0b4  # via botbuilder-ai, botbuilder-dialogs
+    # via -r requirements.in
+botbuilder-core==4.5.0b4
+    # via
+    #   botbuilder-ai
+    #   botbuilder-dialogs
 botbuilder-dialogs==4.5.0b4
-botbuilder-schema==4.5.0b4  # via botbuilder-ai, botbuilder-core, botbuilder-dialogs, botframework-connector
-botframework-connector==4.5.0b4  # via botbuilder-core, botbuilder-dialogs
-certifi==2019.6.16        # via msrest, requests
-cffi==1.12.3              # via cryptography
-chardet==3.0.4            # via aiohttp, requests
-click==7.0                # via flask
-coverage==4.5.4           # via pytest-cov
-cryptography==2.7         # via adal, botframework-connector
-datedelta==1.3            # via recognizers-text-date-time
-emoji==0.5.3              # via botbuilder-dialogs
+    # via -r requirements.in
+botbuilder-schema==4.5.0b4
+    # via
+    #   botbuilder-ai
+    #   botbuilder-core
+    #   botbuilder-dialogs
+    #   botframework-connector
+botframework-connector==4.5.0b4
+    # via
+    #   botbuilder-core
+    #   botbuilder-dialogs
+certifi==2019.6.16
+    # via
+    #   msrest
+    #   requests
+cffi==1.12.3
+    # via cryptography
+chardet==3.0.4
+    # via
+    #   aiohttp
+    #   requests
+click==7.0
+    # via flask
+coverage==4.5.4
+    # via pytest-cov
+cryptography==2.7
+    # via
+    #   adal
+    #   botframework-connector
+datedelta==1.3
+    # via recognizers-text-date-time
+emoji==0.5.3
+    # via botbuilder-dialogs
 flask==1.1.1
-grapheme==0.5.0           # via botbuilder-dialogs
-idna==2.8                 # via requests, yarl
-importlib-metadata==0.19  # via pluggy, pytest
-isodate==0.6.0            # via msrest
-isort==4.3.21             # via pylint
-itsdangerous==1.1.0       # via flask
-jinja2==2.10.1            # via flask
-lazy-object-proxy==1.4.2  # via astroid
-markupsafe==1.1.1         # via jinja2
-mccabe==0.6.1             # via pylint
+    # via -r requirements.in
+grapheme==0.5.0
+    # via botbuilder-dialogs
+idna==2.8
+    # via
+    #   requests
+    #   yarl
+importlib-metadata==0.19
+    # via pluggy
+isodate==0.6.0
+    # via msrest
+isort==4.3.21
+    # via pylint
+itsdangerous==1.1.0
+    # via flask
+jinja2==2.10.1
+    # via flask
+lazy-object-proxy==1.4.2
+    # via astroid
+markupsafe==1.1.1
+    # via jinja2
+mccabe==0.6.1
+    # via pylint
 mock==3.0.5
-more-itertools==7.2.0     # via pytest, zipp
-msrest==0.6.9             # via azure-cognitiveservices-language-luis, botbuilder-schema, botframework-connector, msrestazure
-msrestazure==0.6.1        # via azure-cognitiveservices-language-luis
-multidict==4.5.2          # via aiohttp, yarl
-oauthlib==3.1.0           # via requests-oauthlib
-packaging==19.1           # via pytest
-pluggy==0.12.0            # via pytest
-py==1.8.0                 # via pytest
-pycparser==2.19           # via cffi
-pyjwt==1.7.1              # via adal, botframework-connector
+    # via -r requirements.in
+more-itertools==7.2.0
+    # via
+    #   pytest
+    #   zipp
+msrest==0.6.9
+    # via
+    #   azure-cognitiveservices-language-luis
+    #   botbuilder-schema
+    #   botframework-connector
+    #   msrestazure
+msrestazure==0.6.1
+    # via azure-cognitiveservices-language-luis
+multidict==4.5.2
+    # via
+    #   aiohttp
+    #   yarl
+oauthlib==3.1.0
+    # via requests-oauthlib
+packaging==19.1
+    # via pytest
+pluggy==0.12.0
+    # via pytest
+py==1.10.0
+    # via pytest
+pycparser==2.19
+    # via cffi
+pyjwt==1.7.1
+    # via
+    #   adal
+    #   botframework-connector
 pylint==2.3.1
-pyparsing==2.4.2          # via packaging
+    # via -r requirements.in
+pyparsing==2.4.2
+    # via packaging
 pytest-cov==2.7.1
+    # via -r requirements.in
 pytest-mock==1.10.4
+    # via -r requirements.in
 pytest==5.1.2
-python-dateutil==2.8.0    # via adal
-pytz==2019.2              # via babel
-recognizers-text-choice==1.0.1a0  # via botbuilder-dialogs
-recognizers-text-date-time==1.0.1a0  # via botbuilder-dialogs
-recognizers-text-number-with-unit==1.0.1a0  # via botbuilder-dialogs, recognizers-text-date-time
-recognizers-text-number==1.0.1a0  # via botbuilder-dialogs, recognizers-text-date-time, recognizers-text-number-with-unit
-recognizers-text==1.0.1a0  # via botbuilder-dialogs, recognizers-text-choice, recognizers-text-date-time, recognizers-text-number, recognizers-text-number-with-unit
-regex==2019.8.19          # via recognizers-text-choice, recognizers-text-date-time, recognizers-text-number, recognizers-text-number-with-unit
-requests-oauthlib==1.2.0  # via msrest
-requests==2.22.0          # via adal, botframework-connector, msrest, requests-oauthlib
-six==1.12.0               # via astroid, cryptography, isodate, mock, packaging, python-dateutil
-typed-ast==1.4.0          # via astroid
-urllib3==1.25.3           # via requests
-wcwidth==0.1.7            # via pytest
-werkzeug==0.15.5          # via flask
-wrapt==1.11.2             # via astroid
-yarl==1.3.0               # via aiohttp
-zipp==0.6.0               # via importlib-metadata
+    # via
+    #   -r requirements.in
+    #   pytest-cov
+    #   pytest-mock
+python-dateutil==2.8.0
+    # via adal
+pytz==2019.2
+    # via babel
+recognizers-text-choice==1.0.1a0
+    # via botbuilder-dialogs
+recognizers-text-date-time==1.0.1a0
+    # via botbuilder-dialogs
+recognizers-text-number-with-unit==1.0.1a0
+    # via
+    #   botbuilder-dialogs
+    #   recognizers-text-date-time
+recognizers-text-number==1.0.1a0
+    # via
+    #   botbuilder-dialogs
+    #   recognizers-text-date-time
+    #   recognizers-text-number-with-unit
+recognizers-text==1.0.1a0
+    # via
+    #   botbuilder-dialogs
+    #   recognizers-text-choice
+    #   recognizers-text-date-time
+    #   recognizers-text-number
+    #   recognizers-text-number-with-unit
+regex==2019.8.19
+    # via
+    #   recognizers-text-choice
+    #   recognizers-text-date-time
+    #   recognizers-text-number
+    #   recognizers-text-number-with-unit
+requests-oauthlib==1.2.0
+    # via msrest
+requests==2.22.0
+    # via
+    #   adal
+    #   botframework-connector
+    #   msrest
+    #   requests-oauthlib
+six==1.12.0
+    # via
+    #   astroid
+    #   cryptography
+    #   isodate
+    #   mock
+    #   packaging
+    #   python-dateutil
+typed-ast==1.4.0
+    # via astroid
+urllib3==1.25.3
+    # via requests
+wcwidth==0.1.7
+    # via pytest
+werkzeug==0.15.5
+    # via flask
+wrapt==1.11.2
+    # via astroid
+yarl==1.3.0
+    # via aiohttp
+zipp==0.6.0
+    # via importlib-metadata
